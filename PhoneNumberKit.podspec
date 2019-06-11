@@ -31,7 +31,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.ios.frameworks = 'CoreTelephony'
-  s.osx.frameworks = 'CoreTelephony'
 
   s.ios.deployment_target = '9.0'
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
@@ -44,8 +43,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'UIKit' do |ui|
     ui.dependency 'PhoneNumberKit/PhoneNumberKitCore'
-    ui.ios.deployment_target = '8.0'
-    ui.tvos.deployment_target = '9.0'
+    ui.ios.deployment_target = '9.0'
     ui.source_files = 'PhoneNumberKit/UI/'
   end
 
